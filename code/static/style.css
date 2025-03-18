@@ -1,0 +1,193 @@
+:root {
+    --grey: rgba(60, 60, 59, 1);
+    --grey-opaque: rgba(60, 60, 59, 0.6);
+    --white: #ffffff;
+    --green: #00FF00;
+    --bgcolor: #111112;
+}
+* {
+    overflow: hidden;
+    font-size: 1em;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    background-color: var(--bgcolor);
+}
+@keyframes fadeup {
+    0% {opacity: .0; transform: translateY(100%);}
+    100% {opacity: 1; transform: translateY(0%);}
+}
+.titlelogin {
+    animation-name: fadeup;
+    animation-duration: .75s;
+    padding-top: 80px;
+    text-align: center;
+}
+.titlelogin h1 {
+    margin: 0; 
+    font-size: 62px;
+    color: #85a185;
+}
+.userlogin {
+    animation-name: fadeup;
+    animation-duration: .75s;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.userlogin input {
+    height: 8vh;
+    width: 50vw;
+    min-width: none;
+    font-size: 30px;
+    font-family: monospace;
+    color: var(--green);
+    text-align: center;
+}
+.userlogin button {
+    padding-top: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    padding-bottom: 80px;
+}
+.userlogin a {
+    text-align: center;
+    font-size: 22px;
+    color: #7482b5;
+    font-family: monospace;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+.super-container {
+    height: 80vh;
+    width: 90%;
+    background-size: cover;
+    padding: 5%;
+}
+.table-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 60%;
+    max-height: 60%;
+    width: 100%;
+    
+}
+.table-container * {
+    animation-name: fadeup;
+    animation-duration: .75s;
+    width: 40%;
+    height: 20%;
+}
+
+#scoreboard, #hints {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: rgba(0,0,0,0.8);
+    color: var(--green);
+    gap: 30px;
+}
+th {
+    background-color: var(--grey-opaque);
+}
+#scoreboard * {
+    animation-name: fadeup;
+    animation-duration: .75s;
+    border-bottom: solid 1px var(--green);
+    word-wrap: break-word;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.answer-container {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: solid 1px var(--green); */
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+.answer-container p {
+    color: var(--green);
+    font-size: 2em;
+}
+.answer {
+    display: flex;
+    flex-direction: column;
+    max-height: 80%;
+    max-width: 90%;
+    flex-grow: 1;
+    overflow: visible;
+}
+.answer input {
+        height: 10vh;
+        width: 60vw;
+        min-width: none;
+        font-size: 3em;
+        color: var(--green);
+        background-color: var(--grey-opaque);
+        transition: border-color 2s ease, box-shadow 2s ease;
+        text-align: center;
+        font-family: monospace;
+}
+input:focus {
+    outline: none;
+    border: solid 1px var(--green);
+}
+.submitter {
+    animation-name: fadeup;
+    animation-duration: .75s;
+    display: flex;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    flex-wrap: nowrap;
+}
+
+button,
+button *,
+button :after,
+button :before,
+button:after,
+button:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: var(--green);
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+button:disabled {
+  cursor: default;
+}
+button:-moz-focusring {
+  outline: auto;
+}
+button {
+    font-family: monospace;
+    font-size: 15px;
+    border-width: 2px;
+    padding: 0.8rem 3rem;
+}
+    button:hover {
+        color: #98bf63;
+    }
